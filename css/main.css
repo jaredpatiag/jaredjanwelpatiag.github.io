@@ -1359,71 +1359,90 @@ tbody {
   line-height: 1.5;
 }
 
-/* ---------------------------------- */
-/* EDUCATION SECTION STYLES (REVISED FOR RESPONSIVENESS) */
-/* ---------------------------------- */
+//* ------------------------------------------------ */
+/* EDUCATION SECTION STYLES (Final Uniform Design) */
+/* ------------------------------------------------ */
 
 /* 1. The main container for all the cards */
 .education-card-container {
-    display: flex; /* Use Flexbox for layout */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    justify-content: space-around; /* Use space-around for balanced gaps */
-    gap: 15px; /* Reduced gap for a tighter fit */
-    padding-top: 10px; /* Add slight top padding */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; /* Spreads cards evenly across the row */
+    gap: 15px; /* Space between rows (vertical gap) */
+    padding: 10px 0;
 }
 
-/* 2. The individual education card */
+/* 2. The individual education card (ensures equal width) */
 .education-card {
-    /* For responsiveness, we calculate the width to ensure 4 cards fit with minimal space */
-    width: 23%; 
-    min-width: 220px; /* Minimum width to keep them readable */
+    /* Use calc() to ensure four cards fit on a line, accounting for the 15px gaps */
+    width: calc(25% - 15px); 
+    min-width: 200px; /* Prevents them from collapsing too much on large tablets */
     
-    border: 1px solid #f1f1f1; /* Using your general border color */
-    border-radius: 4px; /* Using your general border radius */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
     overflow: hidden;
     background-color: #ffffff;
     text-align: left;
+    height: auto; /* Ensures the card height adjusts based on its content */
 }
 
-/* 3. The image container */
+/* 3. Image Container: Enforcing a small, fixed height for uniformity */
 .education-image-container {
     width: 100%;
-    height: 120px; /* **Crucially reduced height** for less vertical space */
+    /* 🚨 KEY FIX: Reduced, uniform height across all devices to save vertical space. */
+    height: 120px; 
     overflow: hidden;
-    background-color: #f0f0f0;
 }
 
-/* 4. The image itself */
+/* 4. The image itself: Ensures the image covers the container without stretching */
 .education-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* 🚨 KEY FIX: object-fit: cover ensures the image fills the 120px height, cropping if necessary, but never distorting. */
+    object-fit: cover; 
     display: block;
-    margin-bottom: 0; /* Override default p margin */
+    margin-bottom: 0;
+    border-radius: 0;
 }
 
-/* 5. The text content area */
+/* 5. The text content area: Reduced padding and smaller fonts */
 .education-card-content {
-    padding: 10px; /* Reduced padding */
+    /* 🚨 KEY FIX: Reduced padding to save vertical space. */
+    padding: 8px 10px; 
+    /* 🚨 IMPORTANT: You can set a fixed height here if you want all text boxes to be exactly the same size, even if one has less content: */
+    /* min-height: 80px; */ 
 }
 
 /* 6. Text styling inside the card */
 .education-card-content h4 {
     margin-top: 0;
-    margin-bottom: 5px; /* Reduced margin */
-    font-size: 1em; /* Smaller font size */
+    margin-bottom: 3px; /* Reduced margin */
+    font-size: 0.95em; /* Slightly smaller title */
     line-height: 1.2;
-    color: #444; /* Using your general header color */
+    color: #444; 
 }
 
 .education-card-content p {
-    font-size: 0.8em; /* Smaller paragraph font */
+    font-size: 0.8em; /* Smaller body text */
     color: #666;
-    line-height: 1.4;
-    margin-bottom: 0; /* Remove default p margin */
+    line-height: 1.3;
+    margin-bottom: 0; 
 }
 
+
+/* --- Media Query for LAPTOP SCREENS (769px to 1200px) --- */
+/* Switches to a 2x2 layout on mid-sized laptops to prevent vertical scrolling. */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .education-card {
+        /* Use calc() to ensure two cards fit per row */
+        width: calc(50% - 10px); 
+        min-width: 0;
+    }
+    .education-card-container {
+        justify-content: space-between;
+    }
+}
 /* --- Media Query for LAPTOP SCREENS (769px to 1200px) --- */
 /* This targets the range where you likely see the unwanted scroll */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
