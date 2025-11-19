@@ -1297,71 +1297,76 @@ tbody {
   display: grid;
 }
 /* ------------------------------------------------ */
-/* EDUCATION SECTION STYLES (Final Uniform Design) */
+/* EDUCATION SECTION STYLES (Final Uniform and Floating Design) */
 /* ------------------------------------------------ */
 
 /* 1. The main container for all the cards */
 .education-card-container {
     display: flex;
     flex-wrap: wrap; 
-    justify-content: space-between; /* Spreads cards evenly across the row */
-    gap: 15px; /* Space between rows (vertical gap) */
+    justify-content: space-between; 
+    gap: 15px; 
     padding: 10px 0;
 }
 
 /* 2. The individual education card (ensures equal width) */
 .education-card {
-    /* Use calc() to ensure four cards fit on a line, accounting for the 15px gaps */
     width: calc(25% - 15px); 
-    min-width: 200px; /* Prevents them from collapsing too much on large tablets */
+    min-width: 200px;
     
     border: 1px solid #f1f1f1;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    
+    /* 🚨 KEY FIX: Initial floating and shadow effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    
     overflow: hidden;
     background-color: #ffffff;
     text-align: left;
-    height: auto; /* Ensures the card height adjusts based on its content */
+    height: auto; 
 }
 
-/* 3. Image Container: Enforcing a small, fixed height for uniformity */
+/* 3. Floating Hover Effect */
+.education-card:hover {
+    /* Lifts the card and increases the shadow for a professional "floating" look */
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* 4. Image Container: Uniform Height and Aspect Ratio Enforcement */
 .education-image-container {
     width: 100%;
-    /* 🚨 KEY FIX: Reduced, uniform height across all devices to save vertical space. */
     height: 120px; 
     overflow: hidden;
 }
 
-/* 4. The image itself: Ensures the image covers the container without stretching */
+/* 5. The image itself: Ensures the image covers the container without stretching */
 .education-image-container img {
     width: 100%;
     height: 100%;
-    /* 🚨 KEY FIX: object-fit: cover ensures the image fills the 120px height, cropping if necessary, but never distorting. */
     object-fit: cover; 
     display: block;
     margin-bottom: 0;
     border-radius: 0;
 }
 
-/* 5. The text content area: Reduced padding and smaller fonts */
+/* 6. The text content area: Reduced padding and smaller fonts */
 .education-card-content {
-    /* 🚨 KEY FIX: Reduced padding to save vertical space. */
     padding: 8px 10px; 
-    /* 🚨 IMPORTANT: You can set a fixed height here if you want all text boxes to be exactly the same size, even if one has less content: */
-    /* min-height: 80px; */ 
 }
 
-/* 6. Text styling inside the card */
+/* 7. Text styling inside the card */
 .education-card-content h4 {
     margin-top: 0;
-    margin-bottom: 3px; /* Reduced margin */
-    font-size: 0.95em; /* Slightly smaller title */
+    margin-bottom: 3px; 
+    font-size: 0.95em; 
     line-height: 1.2;
     color: #444; 
 }
 
 .education-card-content p {
-    font-size: 0.8em; /* Smaller body text */
+    font-size: 0.8em; 
     color: #666;
     line-height: 1.3;
     margin-bottom: 0; 
@@ -1372,7 +1377,6 @@ tbody {
 /* Switches to a 2x2 layout on mid-sized laptops to prevent vertical scrolling. */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
     .education-card {
-        /* Use calc() to ensure two cards fit per row */
         width: calc(50% - 10px); 
         min-width: 0;
     }
