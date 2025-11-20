@@ -5689,3 +5689,166 @@ tbody {
     font-size: 1.8em;
   }
 }
+/* ... existing CSS from before the NEW ACHIEVEMENTS SECTION STYLES block ... */
+
+/* ------------------------------------------------ */
+/* NEW ACHIEVEMENTS SECTION STYLES */
+/* ------------------------------------------------ */
+
+/* --- Tab Layout Fixes --- */
+/* These styles are crucial for the horizontal tab layout */
+.etabs {
+    display: flex; /* Make tabs lay out horizontally */
+    justify-content: space-around; /* Distribute space evenly */
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Example background, adjust as needed */
+    border-bottom: 3px solid #2E8B57; /* Highlight active tab border */
+}
+
+.etabs li.tab {
+    flex-grow: 1; /* Allow tabs to grow and fill available space */
+    text-align: center;
+    position: relative;
+    padding: 0; /* Remove default padding that might cause issues */
+}
+
+.etabs li.tab a {
+    display: block;
+    padding: 15px 10px; /* Adjust padding as needed */
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.etabs li.tab a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.etabs li.tab.active a {
+    background-color: #2E8B57; /* Active tab background color */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Ensure the icons within the tabs are styled correctly */
+.etabs li.tab i {
+    margin-right: 5px;
+}
+
+
+/* --- Achievements Specific Styles --- */
+#achievements {
+    min-height: 60vh;
+    padding: 20px; /* Add some padding around the content */
+    background-color: #fff; /* Ensure it has a background */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.achievements-header {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.achievements-title {
+    margin: 0;
+    color: #2E8B57;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1; /* Ensure line height matches the icon height */
+}
+
+.trophy-icon {
+    width: 30px; /* Make smaller */
+    height: 30px; /* Make smaller and ensure it's square for circle */
+    margin-right: 10px; /* Move to the left of the title */
+    border-radius: 50%; /* Make it circular */
+    border: 2px solid #2E8B57; /* Add a frame */
+    padding: 3px; /* Space between image and border */
+    object-fit: contain; /* Ensure the image fits within the circle */
+    background-color: #f0f8ff; /* Light background for the icon */
+}
+
+/* New position for the icon */
+.achievements-header .trophy-icon {
+    order: -1; /* Place the icon before the title */
+}
+
+.achievement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.achievement-group {
+    width: calc(33.333% - 14px); /* Adjusted width for 3 columns with gap */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.achievement-group h4 {
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.achievement-group ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.achievement-group li {
+    margin-bottom: 5px;
+    padding-left: 15px;
+    text-indent: -15px;
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #666;
+}
+
+.achievement-group li:before {
+    content: "•";
+    color: #2E8B57;
+    font-weight: bold;
+    display: inline-block;
+    width: 15px;
+}
+
+/* Media Query for Tablet/Netbook (768px and up) - 2 columns */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .achievement-group {
+        width: calc(50% - 10px); /* 2 columns with a gap */
+    }
+    /* No need to force the third group to full width if it wraps naturally.
+       If you still want it full width, you can add this:
+       .achievement-group:nth-child(3) {
+           width: 98%;
+       }
+    */
+}
+
+/* Media Query for Small Tablet (max-width: 600px) - 1 column */
+@media only screen and (max-width: 600px) {
+    .achievement-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .achievement-group {
+        width: 100%;
+    }
+    .achievements-title {
+        font-size: 1.8em;
+    }
+}
