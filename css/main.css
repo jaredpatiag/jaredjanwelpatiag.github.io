@@ -5584,3 +5584,108 @@ tbody {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
   border-color: rgba(255, 255, 255, 0.4);
 }
+
+/* ------------------------------------------------ */
+/* NEW ACHIEVEMENTS SECTION STYLES */
+/* ------------------------------------------------ */
+
+#achievements {
+  /* Ensures minimum height is maintained like other tabs */
+  min-height: 60vh;
+}
+
+.achievements-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.achievements-title {
+  margin: 0;
+  color: #2E8B57; /* Use the theme color */
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.trophy-icon {
+  width: 40px;
+  height: auto;
+  margin-left: 10px;
+  /* Ensure the image doesn't wrap or cause alignment issues */
+  vertical-align: middle;
+}
+
+.achievement-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.achievement-group {
+  /* Default to a smaller width to fit 3 columns on large screens */
+  width: 31.333%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.achievement-group h4 {
+  color: #444;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.achievement-group ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+.achievement-group li {
+  margin-bottom: 5px;
+  padding-left: 15px;
+  text-indent: -15px;
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #666;
+}
+
+.achievement-group li:before {
+  content: "•";
+  color: #2E8B57;
+  font-weight: bold;
+  display: inline-block;
+  width: 15px;
+}
+
+/* Media Query for Tablet/Netbook (768px and up) - 2 columns */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .achievement-group {
+    width: calc(50% - 10px); /* 2 columns with a gap */
+  }
+  /* Force the third group to take full width for better alignment */
+  .achievement-group:nth-child(3) {
+    width: 98%;
+  }
+}
+
+/* Media Query for Small Tablet (max-width: 600px) - 1 column */
+@media only screen and (max-width: 600px) {
+  .achievement-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .achievement-group {
+    width: 100%;
+  }
+  .achievements-title {
+    font-size: 1.8em;
+  }
+}
