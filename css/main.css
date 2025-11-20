@@ -11169,3 +11169,98 @@ tbody {
   border-color: rgba(255, 255, 255, 0.4);
 
 }
+/* ------------------------------------------------ */
+/* ACHIEVEMENTS SECTION STYLES (Organized and Compact) */
+/* ------------------------------------------------ */
+
+/* Main Achievements Container - Ensures content is centered and fits in view */
+#achievements {
+    /* To prevent scrolling in the tab content area on smaller monitors */
+    overflow-y: hidden;
+    height: 100%; /* Take up the full height of the tab-data-wrap */
+    padding: 0 10px; /* Reduced padding for more space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievements-container {
+    width: 90%; /* Keep content contained */
+    max-width: 800px; /* Max width for large screens */
+    margin: 0 auto;
+    font-size: 1em; /* Base font size */
+    
+    /* Distribute content vertically to prevent scroll */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    /* This calculation is a safe estimate for content height without forcing scroll */
+    max-height: calc(100vh - 200px); 
+}
+
+/* Heading with Image */
+.achievements-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 1.8em; /* Adjusted heading size for fit */
+    color: #2E8B57; /* Highlighted color */
+}
+
+.awards-icon {
+    width: 28px; /* Small size for image */
+    height: 28px;
+    margin-left: 10px;
+    vertical-align: middle;
+    /* Ensures the image aligns nicely with the heading text */
+    margin-top: -5px; 
+}
+
+/* Section for each level (SHS, JHS, Elementary) */
+.achievement-level {
+    margin-bottom: 0.8em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.achievement-level:last-child {
+    border-bottom: none;
+}
+
+.achievement-level h3 {
+    font-size: 1.3em;
+    color: #444;
+    margin-bottom: 0.5em;
+}
+
+.achievement-list {
+    list-style: disc inside;
+    padding-left: 15px;
+    margin-bottom: 0; /* Remove default margin for tighter fit */
+}
+
+.achievement-list li {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Media Query for smaller screens to ensure it fits */
+@media only screen and (max-width: 768px) {
+    .achievements-container {
+        width: 100%;
+        max-height: none; /* Allow height to auto-adjust */
+    }
+
+    #achievements {
+        overflow-y: auto; /* Allow scrolling on small devices */
+    }
+    
+    .achievements-heading {
+        font-size: 1.5em;
+    }
+}
