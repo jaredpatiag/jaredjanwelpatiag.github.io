@@ -11519,11 +11519,11 @@ just give me the block to paste ill add it by myself
 }
 
 .batchmates-list li {
-  padding: 4px 8px;
-  font-size: 0.7em;
+  padding: 2px 5px;
+  font-size: 0.65em;
   color: #444;
   border-bottom: 1px solid #f1f1f1;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .batchmates-list li:last-child {
@@ -11550,7 +11550,7 @@ just give me the block to paste ill add it by myself
 
 .batchmates-image-container {
   width: 100%;
-  height: 180px;
+  height: 140px;
   overflow: hidden;
   background-color: #f0f0f0;
 }
@@ -11592,17 +11592,17 @@ just give me the block to paste ill add it by myself
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 15px;
-  padding: 10px 0;
+  margin-top: 10px;
+  padding: 5px 0;
 }
 
 .nav-btn {
   display: inline-block;
-  padding: 10px 25px;
+  padding: 8px 20px;
   background-color: #2E8B57;
   color: #fff;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   border: none;
@@ -11636,6 +11636,16 @@ just give me the block to paste ill add it by myself
 #family section,
 #batchmates section {
   overflow: visible;
+}
+
+/* Prevent scrolling on the entire page */
+html, body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#tab-data-wrap {
+  overflow: hidden;
 }
 
 /* Responsive adjustments */
