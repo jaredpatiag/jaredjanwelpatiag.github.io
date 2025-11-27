@@ -43,8 +43,30 @@ animMeter();
         transitionOut	: 'slideUp',
         animationSpeed	: 800,
         tabActiveClass	: 'active'}).bind('easytabs:midTransition', function(event, $clicked, $targetPanel){
-            if($targetPanel.selector=='#resume'){
+            if($targetPanel.selector=='#family'){
                     animMeter();
             }
         });
     });
+
+// Tab navigation function
+var tabOrder = ['about', 'education', 'achievements', 'family', 'batchmates'];
+
+function navigateTab(direction) {
+    var currentHash = window.location.hash.replace('#', '') || 'about';
+    var currentIndex = tabOrder.indexOf(currentHash);
+    
+    if (currentIndex === -1) currentIndex = 0;
+    
+    var newIndex;
+    if (direction === 'next') {
+        newIndex = (currentIndex + 1) % tabOrder.length;
+    } else {
+        newIndex = (currentIndex - 1 + tabOrder.length) % tabOrder.length;
+    }
+    
+    var newTab = tabOrder[newIndex];
+    
+    // Trigger click on the corresponding tab
+    $('.etabs .tab a[href="#' + newTab + '"]').click();
+}
