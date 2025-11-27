@@ -11450,6 +11450,11 @@ just give me the block to paste ill add it by myself
   margin-bottom: 0;
 }
 
+/* Specific positioning for father handshake image to show the handshake */
+.family-image-container img[alt="Father"] {
+  object-position: center 60%;
+}
+
 .family-card-content {
   padding: 12px 15px;
 }
@@ -11593,9 +11598,10 @@ just give me the block to paste ill add it by myself
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: stretch;
+  align-items: center;
   position: relative;
   width: 100%;
+  gap: 15px;
 }
 
 /* Make tab-container fill the available space */
@@ -11609,26 +11615,28 @@ just give me the block to paste ill add it by myself
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 12px;
+  padding: 12px 20px;
   background-color: #2E8B57;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 45px;
   flex-shrink: 0;
   z-index: 10;
+  height: fit-content;
 }
 
 .side-nav-btn.prev-btn {
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
 }
 
 .side-nav-btn.next-btn {
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
 }
 
 .side-nav-btn:hover {
