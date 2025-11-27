@@ -11403,3 +11403,261 @@ just give me the block to paste ill add it by myself
   overflow: visible;
 
 }
+
+/* ------------------------------------------------ */
+/* MY FAMILY SECTION STYLES */
+/* ------------------------------------------------ */
+
+.family-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.family-item {
+  width: calc(33.333% - 20px);
+  min-width: 200px;
+  max-width: 280px;
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  overflow: hidden;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.family-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+}
+
+.family-image-container {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.family-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0;
+}
+
+.family-card-content {
+  padding: 12px 15px;
+}
+
+.family-card-content h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  color: #2E8B57;
+  text-transform: uppercase;
+}
+
+.family-card-content h5 {
+  margin: 0 0 8px 0;
+  font-size: 1em;
+  color: #444;
+  font-weight: 600;
+}
+
+.family-card-content p {
+  font-size: 0.85em;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* Disable scrolling in family tab */
+#family {
+  overflow: hidden;
+}
+
+#family section {
+  max-height: none;
+  overflow: visible;
+}
+
+/* ------------------------------------------------ */
+/* MY BATCHMATES SECTION STYLES */
+/* ------------------------------------------------ */
+
+.batchmates-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 5px 0;
+}
+
+.batchmates-left,
+.batchmates-right {
+  flex: 1;
+  max-width: 30%;
+}
+
+.batchmates-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.batchmates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.batchmates-list li {
+  padding: 4px 8px;
+  font-size: 0.7em;
+  color: #444;
+  border-bottom: 1px solid #f1f1f1;
+  line-height: 1.3;
+}
+
+.batchmates-list li:last-child {
+  border-bottom: none;
+}
+
+.batchmates-frame {
+  border: 2px solid rgba(46, 139, 87, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  overflow: hidden;
+  background-color: #ffffff;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+}
+
+.batchmates-frame:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+}
+
+.batchmates-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.batchmates-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0;
+}
+
+.batchmates-description {
+  padding: 10px 15px;
+}
+
+.batchmates-description p {
+  font-size: 0.9em;
+  color: #2E8B57;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+/* Disable scrolling in batchmates tab */
+#batchmates {
+  overflow: hidden;
+}
+
+#batchmates section {
+  max-height: none;
+  overflow: visible;
+}
+
+/* ------------------------------------------------ */
+/* TAB NAVIGATION BUTTONS */
+/* ------------------------------------------------ */
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  padding: 10px 0;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #2E8B57;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #228B22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Disable scrolling in all tab sections */
+#about,
+#education,
+#achievements,
+#family,
+#batchmates {
+  overflow: hidden;
+}
+
+#about section,
+#education section,
+#achievements section,
+#family section,
+#batchmates section {
+  overflow: visible;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .family-item {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .batchmates-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .batchmates-left,
+  .batchmates-right,
+  .batchmates-center {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .batchmates-list li {
+    font-size: 0.8em;
+  }
+}
