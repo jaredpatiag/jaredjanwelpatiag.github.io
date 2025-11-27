@@ -11593,7 +11593,7 @@ just give me the block to paste ill add it by myself
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: stretch;
   position: relative;
   width: 100%;
 }
@@ -11606,8 +11606,6 @@ just give me the block to paste ill add it by myself
 
 /* Side navigation buttons (left and right of main frame) */
 .side-nav-btn {
-  position: sticky;
-  top: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11621,10 +11619,8 @@ just give me the block to paste ill add it by myself
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: 45px;
-  height: auto;
   flex-shrink: 0;
   z-index: 10;
-  align-self: stretch;
 }
 
 .side-nav-btn.prev-btn {
