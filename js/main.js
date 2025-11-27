@@ -46,11 +46,39 @@ animMeter();
             if($targetPanel.selector=='#family'){
                     animMeter();
             }
+            // Update navigation button visibility
+            updateNavButtonVisibility($targetPanel.selector.replace('#', ''));
         });
+
+    // Initial navigation button visibility check
+    updateNavButtonVisibility(window.location.hash.replace('#', '') || 'about');
     });
 
 // Tab navigation function
 var tabOrder = ['about', 'education', 'achievements', 'family', 'batchmates'];
+
+function updateNavButtonVisibility(currentTab) {
+    var prevBtn = document.getElementById('global-prev-btn');
+    var nextBtn = document.getElementById('global-next-btn');
+    
+    if (prevBtn) {
+        // Hide Previous button on About tab (first tab)
+        if (currentTab === 'about') {
+            prevBtn.classList.add('hidden');
+        } else {
+            prevBtn.classList.remove('hidden');
+        }
+    }
+    
+    if (nextBtn) {
+        // Hide Next button on Batchmates tab (last tab)
+        if (currentTab === 'batchmates') {
+            nextBtn.classList.add('hidden');
+        } else {
+            nextBtn.classList.remove('hidden');
+        }
+    }
+}
 
 function navigateTab(direction) {
     var currentHash = window.location.hash.replace('#', '') || 'about';
