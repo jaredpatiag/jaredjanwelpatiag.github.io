@@ -286,7 +286,7 @@ h2 {
 
 
 
-  font-size: 2.75em;
+  font-size: 2.2em;
 
 
 
@@ -1666,11 +1666,11 @@ body {
 
 
 
-  padding-top: 50px;
+  padding-top: 20px;
 
 
 
-  max-width: 1020px;
+  max-width: 1200px;
 
 
 
@@ -1846,7 +1846,7 @@ body {
 
 
 
-  padding-bottom: 1em;
+  padding-bottom: 0.3em;
 
 
 
@@ -1890,7 +1890,7 @@ body {
 
 
 
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 
 
 
@@ -2038,7 +2038,7 @@ body {
 
 
 
-  padding: 20px 15px;
+  padding: 12px 20px;
 
 
 
@@ -2266,11 +2266,11 @@ body {
 
 
 
-  height: 200px;
+  height: 150px;
 
 
 
-  width: 200px;
+  width: 150px;
 
 
 
@@ -2278,7 +2278,7 @@ body {
 
 
 
-  margin-top: 30px;
+  margin-top: 10px;
 
 
 
@@ -2386,7 +2386,7 @@ body {
 
 
 
-  margin-bottom: 2em;
+  margin-bottom: 0.8em;
 
 
 
@@ -7254,11 +7254,11 @@ body {
 
 
 
-  padding-top: 50px;
+  padding-top: 20px;
 
 
 
-  max-width: 1020px;
+  max-width: 1200px;
 
 
 
@@ -7434,7 +7434,7 @@ body {
 
 
 
-  padding-bottom: 1em;
+  padding-bottom: 0.3em;
 
 
 
@@ -7478,7 +7478,7 @@ body {
 
 
 
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 
 
 
@@ -7626,7 +7626,7 @@ body {
 
 
 
-  padding: 20px 15px;
+  padding: 12px 20px;
 
 
 
@@ -7854,11 +7854,11 @@ body {
 
 
 
-  height: 200px;
+  height: 150px;
 
 
 
-  width: 200px;
+  width: 150px;
 
 
 
@@ -7866,7 +7866,7 @@ body {
 
 
 
-  margin-top: 30px;
+  margin-top: 10px;
 
 
 
@@ -7974,7 +7974,7 @@ body {
 
 
 
-  margin-bottom: 2em;
+  margin-bottom: 0.8em;
 
 
 
@@ -11154,7 +11154,7 @@ tbody {
 
 
 
-    padding: 20px 15px;
+    padding: 12px 20px;
 
 
 
@@ -11166,7 +11166,7 @@ tbody {
 
 
 
-    min-height: 60vh; /* Set a minimum height, but allow it to grow */
+    min-height: auto; /* Allow content to determine height */
 
 
 
