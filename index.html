@@ -116,9 +116,12 @@
 
 
 
-      <!-- Main Tab Container -->
+      <!-- Main Tab Container with Navigation -->
 
-      <div id="tab-container" class="tab-container">
+      <div class="tab-wrapper">
+        <button class="nav-btn side-nav-btn prev-btn" id="global-prev-btn" onclick="navigateTab('prev')">❮</button>
+        
+        <div id="tab-container" class="tab-container">
 
 
 
@@ -402,11 +405,6 @@
 
               </div>
 
-              <div class="tab-navigation">
-                <button class="nav-btn prev-btn" onclick="navigateTab('prev')">Previous</button>
-                <button class="nav-btn next-btn" onclick="navigateTab('next')">Next</button>
-              </div>
-
             </section>
 
           </div>
@@ -503,11 +501,6 @@
 
 
 
-    </div>
-
-    <div class="tab-navigation">
-      <button class="nav-btn prev-btn" onclick="navigateTab('prev')">Previous</button>
-      <button class="nav-btn next-btn" onclick="navigateTab('next')">Next</button>
     </div>
 
   </section>
@@ -632,11 +625,6 @@
 
               </div>
 
-              <div class="tab-navigation">
-                <button class="nav-btn prev-btn" onclick="navigateTab('prev')">Previous</button>
-                <button class="nav-btn next-btn" onclick="navigateTab('next')">Next</button>
-              </div>
-
             </section>
 
           </div>
@@ -686,11 +674,6 @@
                   </div>
                 </div>
 
-              </div>
-
-              <div class="tab-navigation">
-                <button class="nav-btn prev-btn" onclick="navigateTab('prev')">Previous</button>
-                <button class="nav-btn next-btn" onclick="navigateTab('next')">Next</button>
               </div>
 
             </section>
@@ -771,11 +754,6 @@
 
               </div>
 
-              <div class="tab-navigation">
-                <button class="nav-btn prev-btn" onclick="navigateTab('prev')">Previous</button>
-                <button class="nav-btn next-btn" onclick="navigateTab('next')">Next</button>
-              </div>
-
             </section>
 
           </div>
@@ -786,6 +764,7 @@
 
         </div>
 
+        <button class="nav-btn side-nav-btn next-btn" id="global-next-btn" onclick="navigateTab('next')">❯</button>
       </div>
 
 </body>
