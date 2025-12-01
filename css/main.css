@@ -98,7 +98,7 @@ html {
 
 
 
-  font-size: 100%;
+  font-size: 115%;
 
 
 
@@ -286,7 +286,7 @@ h2 {
 
 
 
-  font-size: 2.2em;
+  font-size: 2.8em;
 
 
 
@@ -350,7 +350,7 @@ h4 {
 
 
 
-  font-size: 1.5em;
+  font-size: 1.8em;
 
 
 
@@ -1586,7 +1586,7 @@ body {
 
 
 
-  width: 92%;
+  width: 98%;
 
 
 
@@ -1670,7 +1670,7 @@ body {
 
 
 
-  max-width: 1200px;
+  max-width: 98%;
 
 
 
@@ -2038,7 +2038,7 @@ body {
 
 
 
-  padding: 12px 20px;
+  padding: 25px 35px;
 
 
 
@@ -2130,7 +2130,7 @@ body {
 
 
 
-  font-size: 14px;
+  font-size: 18px;
 
 
 
@@ -2138,7 +2138,7 @@ body {
 
 
 
-  padding: 2px 10px;
+  padding: 8px 20px;
 
 
 
@@ -2234,7 +2234,7 @@ body {
 
 
 
-  font-size: 16px;
+  font-size: 20px;
 
 
 
@@ -2266,11 +2266,11 @@ body {
 
 
 
-  height: 150px;
+  height: 200px;
 
 
 
-  width: 150px;
+  width: 200px;
 
 
 
@@ -2514,7 +2514,7 @@ body {
 
 
 
-  font-size: 14px;
+  font-size: 18px;
 
 
 
@@ -3566,7 +3566,7 @@ input[type=text], .project_description, input[type=url] {
 
 
 
-  padding: 12px 20px;
+  padding: 25px 35px;
 
 
 
@@ -4722,7 +4722,7 @@ Change widths as necessary
 
 
 
-    font-size: 16px;
+    font-size: 20px;
 
 
 
@@ -5370,7 +5370,7 @@ tbody {
 
 
 
-    height: 120px; 
+    height: 160px; 
 
 
 
@@ -5686,7 +5686,7 @@ html {
 
 
 
-  font-size: 100%;
+  font-size: 115%;
 
 
 
@@ -5938,7 +5938,7 @@ h4 {
 
 
 
-  font-size: 1.5em;
+  font-size: 1.8em;
 
 
 
@@ -7174,7 +7174,7 @@ body {
 
 
 
-  width: 92%;
+  width: 98%;
 
 
 
@@ -7258,7 +7258,7 @@ body {
 
 
 
-  max-width: 1200px;
+  max-width: 98%;
 
 
 
@@ -7626,7 +7626,7 @@ body {
 
 
 
-  padding: 12px 20px;
+  padding: 25px 35px;
 
 
 
@@ -7718,7 +7718,7 @@ body {
 
 
 
-  font-size: 14px;
+  font-size: 18px;
 
 
 
@@ -7726,7 +7726,7 @@ body {
 
 
 
-  padding: 2px 10px;
+  padding: 8px 20px;
 
 
 
@@ -7822,7 +7822,7 @@ body {
 
 
 
-  font-size: 16px;
+  font-size: 20px;
 
 
 
@@ -7854,11 +7854,11 @@ body {
 
 
 
-  height: 150px;
+  height: 200px;
 
 
 
-  width: 150px;
+  width: 200px;
 
 
 
@@ -8102,7 +8102,7 @@ body {
 
 
 
-  font-size: 14px;
+  font-size: 18px;
 
 
 
@@ -9154,7 +9154,7 @@ input[type=text], .project_description, input[type=url] {
 
 
 
-  padding: 12px 20px;
+  padding: 25px 35px;
 
 
 
@@ -10310,7 +10310,7 @@ Change widths as necessary
 
 
 
-    font-size: 16px;
+    font-size: 20px;
 
 
 
@@ -10958,7 +10958,7 @@ tbody {
 
 
 
-    height: 120px; 
+    height: 160px; 
 
 
 
@@ -11154,7 +11154,7 @@ tbody {
 
 
 
-    padding: 12px 20px;
+    padding: 25px 35px;
 
 
 
@@ -11238,7 +11238,7 @@ just give me the block to paste ill add it by myself
 
   margin: 0;
 
-  font-size: 1.5em;
+  font-size: 1.8em;
 
   color: #2E8B57;
 
@@ -11469,7 +11469,7 @@ just give me the block to paste ill add it by myself
 
 .family-image-container {
   width: 100%;
-  height: 160px;
+  height: 200px;
   overflow: hidden;
   background-color: #f0f0f0;
 }
@@ -11557,7 +11557,7 @@ just give me the block to paste ill add it by myself
 
 .batchmates-list li {
   padding: 1px 3px;
-  font-size: 0.58em;
+  font-size: 0.75em;
   color: #444;
   border-bottom: 1px solid #f1f1f1;
   line-height: 1.1;
@@ -11587,7 +11587,7 @@ just give me the block to paste ill add it by myself
 
 .batchmates-image-container {
   width: 100%;
-  height: 220px;
+  height: 280px;
   overflow: hidden;
   background-color: #f0f0f0;
 }
@@ -11647,11 +11647,11 @@ just give me the block to paste ill add it by myself
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 25px 35px;
   background-color: #2E8B57;
   color: #fff;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   border: none;
