@@ -11532,9 +11532,11 @@ just give me the block to paste ill add it by myself
 /* ------------------------------------------------ */
 
 /* Batchmates section with full-screen background image */
+/* Using full viewport width breakout pattern to extend beyond parent container */
 #batchmates {
   position: relative;
   width: 100vw;
+  /* Center the full-width element: move left by half viewport, then right by half parent width */
   margin-left: calc(-50vw + 50%);
   height: 100%;
   overflow: hidden;
@@ -11543,8 +11545,10 @@ just give me the block to paste ill add it by myself
 #batchmates section {
   position: relative;
   width: 100vw;
+  /* Same breakout pattern needed for nested section element */
   margin-left: calc(-50vw + 50%);
   height: 100%;
+  /* Use 'contain' instead of 'cover' to show full photo without cropping */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -11634,6 +11638,7 @@ just give me the block to paste ill add it by myself
 /* Disable scrolling in batchmates tab and remove container constraints */
 #batchmates {
   overflow: hidden;
+  /* Negative margin to counteract #tab-data-wrap padding (25px 35px) and extend to edges */
   margin: -25px -35px;
   padding: 0;
 }
