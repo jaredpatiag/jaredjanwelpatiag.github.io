@@ -11550,43 +11550,39 @@ just give me the block to paste ill add it by myself
 }
 
 .batchmates-container {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
   width: 100%;
   max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   min-height: 450px;
+  padding: 20px;
 }
 
-/* Position name lists absolutely OUTSIDE the white frame */
+/* Name list frames with white backgrounds */
 .batchmates-left,
 .batchmates-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.95);
-  padding: 12px 10px;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
-  width: 200px;
-  z-index: 100;
-  max-height: 80vh;
-  overflow: visible;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .batchmates-left {
-  left: -220px;
+  grid-column: 1;
 }
 
 .batchmates-right {
-  right: -220px;
+  grid-column: 3;
 }
 
-/* Center area - the photo displays here via background-image */
+/* Center area - the photo displays via the section's background-image */
 .batchmates-center {
+  grid-column: 2;
   width: 100%;
   min-height: 450px;
   display: flex;
@@ -11612,26 +11608,6 @@ just give me the block to paste ill add it by myself
 
 .batchmates-list li:last-child {
   border-bottom: none;
-}
-
-.batchmates-description {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.95);
-  padding: 15px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-}
-
-.batchmates-description p {
-  font-size: 1.1em;
-  color: #2E8B57;
-  margin-bottom: 0;
-  font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* Ensure batchmates section can expand to content height */
@@ -11776,7 +11752,7 @@ html, body {
     max-width: 300px;
   }
   
-  /* On mobile, position name lists in normal flow */
+  /* On mobile, stack elements vertically */
   .batchmates-container {
     display: flex;
     flex-direction: column;
@@ -11786,8 +11762,6 @@ html, body {
   
   .batchmates-left,
   .batchmates-right {
-    position: static;
-    transform: none;
     width: 100%;
     max-height: 250px;
     overflow-y: auto;
@@ -11806,14 +11780,8 @@ html, body {
     order: 3;
   }
   
-  .batchmates-description {
-    position: static;
-    transform: none;
-    order: 4;
-  }
-  
   .batchmates-list li {
-    font-size: 0.65em;
+    font-size: 0.75em;
   }
   
   #batchmates section {
@@ -11825,18 +11793,13 @@ html, body {
 
 /* Tablet adjustments */
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
-  .batchmates-left {
-    left: 10px;
-    width: 160px;
-  }
-  
-  .batchmates-right {
-    right: 10px;
-    width: 160px;
+  .batchmates-container {
+    grid-template-columns: 180px 1fr 180px;
+    gap: 15px;
   }
   
   .batchmates-list li {
-    font-size: 0.65em;
+    font-size: 0.7em;
     padding: 4px 6px;
   }
 }
@@ -11966,12 +11929,12 @@ html, body {
   .batchmates-container {
     display: grid;
     grid-template-columns: 250px 1fr 250px;
-    grid-template-rows: 1fr auto;
     gap: 30px;
     align-items: start;
     min-height: 0;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 20px;
   }
 }
