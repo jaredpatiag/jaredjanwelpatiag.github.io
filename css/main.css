@@ -11773,3 +11773,125 @@ html, body {
     font-size: 0.8em;
   }
 }
+
+/* ------------------------------------------------ */
+/* MAXIMIZE SCREEN UTILIZATION FOR DESKTOP */
+/* ------------------------------------------------ */
+@media only screen and (min-width: 1024px) {
+  /* Full viewport height layout using flexbox */
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .main.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-top: 15px;
+    padding-bottom: 0;
+    min-height: 0;
+  }
+
+  /* Tab wrapper takes remaining space */
+  .tab-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    min-height: 0;
+  }
+
+  #tab-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  /* Tab navigation stays at top */
+  .etabs {
+    flex-shrink: 0;
+  }
+
+  /* Tab content fills remaining height */
+  #tab-data-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 20px 30px;
+    box-sizing: border-box;
+  }
+
+  /* Each tab content area fills available space */
+  #about,
+  #education,
+  #achievements,
+  #family,
+  #batchmates {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+
+  #about section,
+  #education section,
+  #achievements section,
+  #family section,
+  #batchmates section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  /* About tab - push contact info to bottom */
+  #about .contact-info {
+    margin-top: auto;
+  }
+
+  /* Education cards - center vertically and horizontally */
+  .education-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 0;
+  }
+
+  /* Achievements grid - keep existing grid structure */
+  .achievements-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-content: start;
+  }
+
+  /* Family cards - center vertically and horizontally */
+  .family-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+  }
+
+  /* Batchmates - stretch to fill height */
+  .batchmates-container {
+    display: flex;
+    align-items: stretch;
+    min-height: 0;
+  }
+}
