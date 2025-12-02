@@ -11457,7 +11457,6 @@ just give me the block to paste ill add it by myself
 .family-item {
   width: calc(33.333% - 20px);
   min-width: 200px;
-  max-width: 280px;
   border: 1px solid #f1f1f1;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -11774,7 +11773,6 @@ html, body {
 @media only screen and (max-width: 768px) {
   .family-item {
     width: 100%;
-    max-width: 300px;
   }
   
   /* On mobile, stack elements vertically */
