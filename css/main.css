@@ -11531,45 +11531,48 @@ just give me the block to paste ill add it by myself
 /* MY BATCHMATES SECTION STYLES */
 /* ------------------------------------------------ */
 
-/* Batchmates section with background image - large and prominent */
+/* Batchmates section - full screen layout */
 #batchmates {
   position: relative;
   overflow: visible;
+  width: 100%;
+  height: 100%;
 }
 
 #batchmates section {
   position: relative;
-  min-height: 500px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
 }
 
 .batchmates-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 20px;
+  grid-template-columns: minmax(180px, 1fr) minmax(600px, 4fr) minmax(180px, 1fr);
+  gap: 25px;
   width: 100%;
   max-width: 100%;
-  align-items: start;
-  min-height: 450px;
-  padding: 20px;
+  height: 100%;
+  align-items: stretch;
+  padding: 0;
 }
 
 /* Name list frames with white backgrounds */
 .batchmates-left,
 .batchmates-right {
   background: rgba(255, 255, 255, 0.95);
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
-  max-height: 500px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .batchmates-left {
@@ -11580,14 +11583,29 @@ just give me the block to paste ill add it by myself
   grid-column: 3;
 }
 
-/* Center area - the photo displays via the section's background-image */
+/* Center area - displays the photo as an actual image element */
 .batchmates-center {
   grid-column: 2;
   width: 100%;
-  min-height: 450px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+/* The actual batchmates photo - full size, not cut off */
+.batchmates-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  display: block;
+  border-radius: 8px;
 }
 
 .batchmates-list {
@@ -11596,13 +11614,13 @@ just give me the block to paste ill add it by myself
   margin: 0;
 }
 
-/* Smaller font size to fit all names without scrolling */
+/* Font size for names - readable but compact */
 .batchmates-list li {
-  padding: 4px 7px;
-  font-size: 0.65em;
+  padding: 8px 10px;
+  font-size: 0.85em;
   color: #333;
   border-bottom: 1px solid #e0e0e0;
-  line-height: 1.25;
+  line-height: 1.4;
   font-weight: 500;
 }
 
@@ -11757,19 +11775,27 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 15px;
+    padding: 10px;
+    height: auto;
   }
   
   .batchmates-left,
   .batchmates-right {
     width: 100%;
-    max-height: 250px;
+    max-height: 300px;
     overflow-y: auto;
   }
   
   .batchmates-center {
-    min-height: 250px;
+    width: 100%;
+    height: 400px;
     order: 2;
+  }
+  
+  .batchmates-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   
   .batchmates-left {
@@ -11782,25 +11808,30 @@ html, body {
   
   .batchmates-list li {
     font-size: 0.75em;
+    padding: 6px 8px;
   }
   
   #batchmates section {
-    background-size: cover;
     min-height: auto;
-    padding: 20px 10px;
+    padding: 15px 10px;
   }
 }
 
 /* Tablet adjustments */
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
   .batchmates-container {
-    grid-template-columns: 180px 1fr 180px;
-    gap: 15px;
+    grid-template-columns: minmax(150px, 1fr) minmax(400px, 2fr) minmax(150px, 1fr);
+    gap: 20px;
   }
   
   .batchmates-list li {
-    font-size: 0.7em;
-    padding: 4px 6px;
+    font-size: 0.75em;
+    padding: 6px 8px;
+  }
+  
+  .batchmates-left,
+  .batchmates-right {
+    padding: 15px;
   }
 }
 
@@ -11925,16 +11956,29 @@ html, body {
     gap: 35px;
   }
 
-  /* Batchmates - full screen with background */
+  /* Batchmates - full screen with photo in center */
   .batchmates-container {
     display: grid;
-    grid-template-columns: 250px 1fr 250px;
-    gap: 30px;
-    align-items: start;
-    min-height: 0;
+    grid-template-columns: minmax(220px, 1fr) minmax(600px, 4fr) minmax(220px, 1fr);
+    gap: 40px;
+    align-items: stretch;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  
+  .batchmates-left,
+  .batchmates-right {
+    padding: 25px;
+  }
+  
+  .batchmates-list li {
+    font-size: 0.9em;
+    padding: 10px 12px;
+  }
+  
+  #batchmates section {
+    padding: 30px;
   }
 }
