@@ -11641,10 +11641,9 @@ just give me the block to paste ill add it by myself
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-/* Disable scrolling in batchmates section */
+/* Ensure batchmates section can expand to content height */
 #batchmates section {
   max-height: none;
-  overflow: visible;
 }
 
 /* ------------------------------------------------ */
