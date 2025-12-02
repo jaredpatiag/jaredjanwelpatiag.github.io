@@ -2498,7 +2498,7 @@ body {
 
 
 
-  padding: 10px 0;
+  padding: 20px 0;
 
 
 
@@ -5098,7 +5098,7 @@ Change widths as necessary
 
 
 
-  height: 100px;
+  height: 180px;
 
 
 
@@ -5246,7 +5246,7 @@ tbody {
 
 
 
-    padding: 10px 0;
+    padding: 20px 0;
 
 
 
@@ -5370,7 +5370,7 @@ tbody {
 
 
 
-    height: 100px; 
+    height: 180px; 
 
 
 
@@ -5434,7 +5434,7 @@ tbody {
 
 
 
-    padding: 5px 8px; 
+    padding: 12px 15px; 
 
 
 
@@ -8086,7 +8086,7 @@ body {
 
 
 
-  padding: 10px 0;
+  padding: 20px 0;
 
 
 
@@ -10686,7 +10686,7 @@ Change widths as necessary
 
 
 
-  height: 100px;
+  height: 180px;
 
 
 
@@ -10832,11 +10832,11 @@ tbody {
 
 
 
-    gap: 20px; 
+    gap: 30px; 
 
 
 
-    padding: 10px 0;
+    padding: 20px 0;
 
 
 
@@ -10960,7 +10960,7 @@ tbody {
 
 
 
-    height: 100px; 
+    height: 180px; 
 
 
 
@@ -11024,7 +11024,7 @@ tbody {
 
 
 
-    padding: 5px 8px; 
+    padding: 12px 15px; 
 
 
 
@@ -11048,11 +11048,11 @@ tbody {
 
 
 
-    margin-bottom: 3px; 
+    margin-bottom: 8px; 
 
 
 
-    font-size: 0.95em; 
+    font-size: 1.1em; 
 
 
 
@@ -11076,7 +11076,7 @@ tbody {
 
 
 
-    font-size: 0.8em; 
+    font-size: 0.95em; 
 
 
 
@@ -11447,7 +11447,7 @@ just give me the block to paste ill add it by myself
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 30px;
-  padding: 10px 0;
+  padding: 20px 0;
   width: 100%;
   max-width: 100%;
 }
@@ -11552,7 +11552,7 @@ just give me the block to paste ill add it by myself
   display: grid;
   grid-template-columns: 250px 1fr 250px;
   grid-template-rows: 1fr auto;
-  gap: 20px;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
   align-items: start;
@@ -11707,7 +11707,7 @@ just give me the block to paste ill add it by myself
 .tab-navigation {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin-top: 10px;
   padding: 5px 0;
 }
@@ -11955,7 +11955,7 @@ html, body {
     display: grid;
     grid-template-columns: 250px 1fr 250px;
     grid-template-rows: 1fr auto;
-    gap: 20px;
+    gap: 30px;
     align-items: start;
     min-height: 0;
     width: 100%;
