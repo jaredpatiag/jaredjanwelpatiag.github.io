@@ -11604,15 +11604,6 @@ just give me the block to paste ill add it by myself
   border-bottom: none;
 }
 
-/* Hide the frame and image container since we're using background */
-.batchmates-frame {
-  display: none;
-}
-
-.batchmates-image-container {
-  display: none;
-}
-
 .batchmates-description {
   position: absolute;
   bottom: 30px;
