@@ -11482,15 +11482,12 @@ just give me the block to paste ill add it by myself
 .family-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   margin-bottom: 0;
 }
 
-/* Specific positioning for father handshake image to show the handshake */
-.family-image-container img[alt="Father"] {
-  object-position: center 60%;
-}
+
 
 .family-card-content {
   padding: 12px 15px;
